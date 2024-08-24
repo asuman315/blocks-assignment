@@ -1,5 +1,5 @@
 import React from "react";
-import BlockCardComponent from "./ui/BlockCard.component";
+import BlockCardComponent from "./ui/BlockCard.uicomponent";
 import { cardsData } from "./components.mocks";
 
 const BlockOne = () => {

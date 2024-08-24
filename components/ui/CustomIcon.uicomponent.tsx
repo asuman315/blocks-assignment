@@ -7,8 +7,8 @@ const CustomIconComponent: FC<CustomIconComponentProps> = (props) => {
   return (
     <div
       className={`${iconSize ?? "ui-w-6 ui-h-6"} ${
-        iconColor ?? "ui-text-primary-500"
-      } ${onAction && "ui-cursor-pointer"} ${classes}`}
+        iconColor ?? "text-gray-900"
+      } ${onAction && "cursor-pointer"} ${classes}`}
       onClick={onAction}
     >
       {iconSVGs[svg]}

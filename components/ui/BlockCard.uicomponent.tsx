@@ -1,8 +1,8 @@
 import React, { FC, useState, useRef, useEffect } from "react";
 import { BlockCardComponentProps } from "../components.types";
 import Image from "next/image";
-import CustomIconComponent from "./CustomIcon.component";
-import CustomButton from "./CustomButton";
+import CustomIconComponent from "./CustomIcon.uicomponent";
+import CustomButton from "./CustomButton.uicomponent";
 
 const BlockCardComponent: FC<BlockCardComponentProps> = ({
   imageSrc,
@@ -34,14 +34,14 @@ const BlockCardComponent: FC<BlockCardComponentProps> = ({
   }, [enteredComment]);
 
   return (
-    <section className="bg-white flex flex-col xl:grid grid-cols-2 xl:rounded-[30px] xl:shadow-custom-one w-screen overflow-hidden md:w-[1200px] max-w-lg mx-auto xl:max-w-5xl mb-12 @container">
-      <section className="relative ">
+    <section className="bg-white flex flex-col xl:grid grid-cols-2 xl:rounded-[30px] xl:shadow-custom-one w-screen overflow-hidden max-w-[516px] mx-auto xl:max-w-5xl mb-12">
+      <section className="relative">
         <img
           src={imageSrc}
           alt={title}
           className="h-auto object-cover rounded-none w-full  md:rounded-[30px] xl:rounded-r-none"
         />
-        <div className="absolute left-0 right-0 top-0  hover:opacity-100 opacity-0 h-full">
+        <div className="absolute hidden xl:block left-0 right-0 top-0  hover:opacity-100 opacity-0 h-full">
           <div className="absolute top-24 left-4 bottom-4 flex items-center justify-center  transition-opacity duration-300">
             <a
               href={link}
@@ -59,13 +59,12 @@ const BlockCardComponent: FC<BlockCardComponentProps> = ({
           </div>
         </div>
       </section>
-      <section className=" @xl:px-7 pb-6 pt-5 @xl:pt-10">
-        <div className="hidden @xl:flex items-center justify-between fixed-section">
+      <section className="xl:px-7 pb-6 pt-5 xl:pt-10">
+        <div className="hidden xl:flex items-center justify-between fixed-section">
           <div className="flex gap-1 lg:gap-5">
             {icons.map((icon, index) => (
-              <button className="hover:bg-gray-100 w-9 h-9 rounded-full flex items-center justify-center">
+              <button className="hover:bg-gray-100 w-9 h-9 rounded-full flex items-center justify-center"  key={index} >
                 <CustomIconComponent
-                  key={index}
                   svg={icon}
                   classes=""
                   iconSize="w-5"
@@ -95,18 +94,18 @@ const BlockCardComponent: FC<BlockCardComponentProps> = ({
             />
           </div>
         </div>
-        <p className="underline hidden @xl:block mt-8 mb-3 text-base font-normal cursor-pointer">
+        <p className="underline hidden xl:block mt-8 mb-3 text-base font-normal cursor-pointer">
           dribble.com
         </p>
         <div className="px-6 md:px-0">
-          <h3 className="text-[20px] @lg:text-[28px] font-semibold ">
+          <h3 className="text-[20px] lg:text-[28px] font-semibold ">
             {title}
           </h3>
           <p className="text-gray-600 mt-3 text-base font-normal ">
             {description}
           </p>
         </div>
-        <div className="@xl:hidden mt-4 px-6 flex justify-between">
+        <div className="xl:hidden mt-4 px-6 flex justify-between">
           <CustomIconComponent
             svg="commentIcon"
             classes="cursor-pointer"
@@ -142,8 +141,8 @@ const BlockCardComponent: FC<BlockCardComponentProps> = ({
         </div>
         <div className="mt-8 flex items-center justify-between px-6 md:px-0">
           <div className="flex  items-center gap-2">
-            <button className="flex items-center justify-center w-12 h-12 text-pink-800 bg-pink-300 rounded-full text-sm font-semibold">
-              <CustomIconComponent svg="basketBallIcon" iconSize="w-9 h-9" />
+            <button className="flex items-center justify-center w-12 h-12  bg-pink-300 rounded-full text-sm font-semibold">
+              <CustomIconComponent svg="basketBallIcon" iconSize="w-9 h-9" iconColor="text-pink-800" />
             </button>
             <div>
               <p className="font-semibold text-sm">Dribble</p>
@@ -166,15 +165,15 @@ const BlockCardComponent: FC<BlockCardComponentProps> = ({
             />
           </div>
         </div>
-        <div className="mt-16 hidden @xl:block">
+      {  !comment ? <div className="mt-16 hidden xl:block">
           <p className="font-semibold text-base">No comments yet</p>
           <p className="font-normal text-base py-4">
-            {comment
-              ? comment
-              : "No comments yet! Add one to start the conversation."}
+            No comments yet! Add one to start the conversation.
           </p>
-        </div>
-        <div className=" gap-2 mt-8 hidden @xl:flex">
+        </div> : (
+          <p className="break-words mt-16 ">{comment}</p>
+        ) }
+        <div className=" gap-2 mt-8 hidden xl:flex">
           <div className="flex items-center justify-center w-12 h-12 leading-none bg-gray-200 text-black font-semibold rounded-full">
             A
           </div>

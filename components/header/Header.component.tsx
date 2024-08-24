@@ -4,7 +4,7 @@ import MobileHeaderComponent from "./MobileHeader.component";
 
 const HeaderComponent = () => {
   return (
-    <header>
+    <header className="w-screen @container">
       <DesktopHeaderComponent />
       <MobileHeaderComponent />
     </header>

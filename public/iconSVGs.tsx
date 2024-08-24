@@ -5,6 +5,173 @@ export type IconSVGsProps = {
 };
 
 export const iconSVGs: IconSVGsProps = {
+  humbergerMenuIcon: (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      data-testid='icon-humbergerMenuIcon'
+    >
+      <title>70 Basic icons by Xicons.co</title>
+      <path
+        d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  searchIcon: (
+    <svg
+      fill="currentColor"
+      height="100%"
+      width="100%"
+      version="1.1"
+      id="XMLID_305_"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 24 24"
+      xmlSpace="preserve"
+      data-testid='icon-searchIcon'
+    >
+      <g id="search">
+        <path
+          d="M22.3,23.7l-6.8-6.8c-1.6,1.3-3.7,2.1-6,2.1C4.3,19,0,14.7,0,9.5S4.3,0,9.5,0S19,4.3,19,9.5c0,2.3-0.8,4.3-2.1,6l6.8,6.8
+		L22.3,23.7z M9.5,2C5.4,2,2,5.4,2,9.5S5.4,17,9.5,17S17,13.6,17,9.5S13.6,2,9.5,2z"
+        ></path>
+      </g>
+    </svg>
+  ),
+  shoppingBagIcon: (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      data-testid='icon-shoppingBagIcon'
+    >
+      <defs>
+        <style>
+          {`.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}`}
+        </style>
+      </defs>
+      <g id="ic-shopping-bag">
+        <path
+          className="cls-1"
+          d="M19.47,21H4.53a2,2,0,0,1-1.94-2.46L5,8.54A2,2,0,0,1,6.91,7H17.09A2,2,0,0,1,19,8.54l2.38,10A2,2,0,0,1,19.47,21Z"
+        />
+        <path
+          className="cls-1"
+          d="M7.56,7l.9-1.82A4,4,0,0,1,12,3h0a4,4,0,0,1,3.54,2.18L16.44,7"
+        />
+      </g>
+    </svg>
+  ),
+  instagramIcon: (
+    <svg
+      fill="currentColor"
+      width="100%"
+      height="100%"
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      data-testid='icon-instagramIcon'
+    >
+      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"></path>
+    </svg>
+  ),
+  twitterIcon: (
+    <svg
+      fill="currentColor"
+      width="100%"
+      height="100%"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      data-testid='icon-twitterIcon'
+    >
+      <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
+    </svg>
+  ),
+  facebookIcon: (
+    <svg
+      fill="currentColor"
+      width="100%"
+      height="100%"
+      viewBox="-7 -2 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMinYMin"
+      className="jam jam-facebook"
+      data-testid='icon-facebookIcon'
+    >
+      <path d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z"></path>
+    </svg>
+  ),
+  saleIcon: (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      data-testid='icon-saleIcon'
+    >
+      <path
+        style={{
+          fill: "currentColor",
+          stroke: "currentColor",
+          strokeMiterlimit: 10,
+        }}
+        d="M40.7,55.5c-1.4,0-2.8-0.6-3.7-1.5L12,29.1c-1-1-1.5-2.4-1.5-3.7V13.9c0-3,2.4-5.4,5.4-5.4h11.5 c1.5,0,2.7,0.5,3.7,1.5L56,34.9c2,2.1,2,5.5,0,7.5L44.5,53.9c-0.6,0.6-1.3,1.1-2,1.3C42,55.4,41.3,55.5,40.7,55.5L40.7,55.5z M20.9,15.4c-0.9,0-1.8,0.4-2.5,1c-1.4,1.4-1.4,3.6,0,4.9c0.7,0.7,1.5,1,2.5,1s1.8-0.4,2.5-1c1.4-1.4,1.4-3.6,0-4.9 C22.7,15.8,21.8,15.4,20.9,15.4z"
+      />
+      <path
+        style={{ fill: "#9090BA" }}
+        d="M55.7,35.3l-25-25c-1-1-2.1-1.4-3.4-1.4h-2c1.3,0,2.4,0.4,3.4,1.4l24.9,24.9c1.8,1.9,1.8,5,0,6.8L42.2,53.5 c-0.5,0.5-1.2,1-1.8,1.2c-0.2,0.1-0.5,0.1-0.7,0.2c0.3,0.1,0.7,0.1,1,0.1c0.5,0,1.2-0.1,1.7-0.3c0.6-0.2,1.3-0.6,1.8-1.2L55.7,42 C57.5,40.2,57.5,37.2,55.7,35.3z"
+      />
+      <path
+        style={{
+          opacity: 0.5,
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: 2,
+          strokeLinecap: "round",
+          strokeMiterlimit: 10,
+        }}
+        d="M42.8,52.1c-0.3,0.3-0.7,0.6-1,0.7h-0.1c-0.3,0.1-0.6,0.2-1,0.2c-0.8,0-1.5-0.3-2-0.8"
+      />
+      <line
+        style={{
+          opacity: 0.5,
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: 2,
+          strokeLinecap: "round",
+          strokeMiterlimit: 10,
+        }}
+        x1="24"
+        x2="26"
+        y1="11"
+        y2="11"
+      />
+      <path
+        style={{
+          opacity: 0.5,
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: 2,
+          strokeLinecap: "round",
+          strokeMiterlimit: 10,
+        }}
+        d="M13,18.4v-4.7c0-1.5,1.2-2.7,2.7-2.7H21"
+      />
+    </svg>
+  ),
   shareTwoIcon: (
     <svg
       fill="currentColor"
@@ -112,6 +279,7 @@ export const iconSVGs: IconSVGsProps = {
       height="100%"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      data-testid='icon-arrowDropDownIcon'
     >
       <g>
         <path fill="none" d="M0 0h24v24H0z"></path>
@@ -127,7 +295,7 @@ export const iconSVGs: IconSVGsProps = {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+      <rect width="48" height="48" fill="white" fillOpacity="0.01"></rect>
       <path
         d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
         fill="currentColor"
