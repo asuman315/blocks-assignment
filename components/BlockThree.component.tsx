@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { cardsData } from "./components.mocks";
-import BlockCardComponent from "./ui/BlockCard.uicomponent";
 import CustomIconComponent from "./ui/CustomIcon.uicomponent";
 
 const BlockThreeComponent = () => {
@@ -41,7 +39,7 @@ const BlockThreeComponent = () => {
 
   return (
     <div className="bg-white overflow-hidden">
-      <header className="flex justify-between items-center px-16 pt-8">
+      <header className="flex flex-col md:flex-row justify-between md:items-center p-4 md:px-6 xl:px-16 md:pt-8">
         <div className="flex items-center space-x-4">
           <h1 className="text-4xl font-bold text-blue-900">URS</h1>
           <div className="bg-gray-300 w-[2px] h-[30px]"></div>
@@ -51,7 +49,7 @@ const BlockThreeComponent = () => {
             </p>
           </div>
         </div>
-        <div className="flex space-x-6 text-gray-400">
+        <div className="flex items-start md:items-center flex-col md:flex-row mt-3 md:mt-0 gap-3 md:gap-6 text-gray-400">
           <div className="flex items-center justify-center">
             <p className="mt-[-3px]">Country</p>
             <CustomIconComponent
@@ -71,15 +69,16 @@ const BlockThreeComponent = () => {
         </div>
       </header>
 
-      <nav className="flex w-[90%] mt-16 justify-between items-center border-t  mx-auto">
-        <div className="flex space-x-8 font-bold">
+      <nav className="flex flex-col md:flex-row w-[93%] lg:w-[90%] 3xl:w-[93%] mt-8 md:mt-16 justify-between md:items-center border-t  mx-auto relative">
+        <div className="flex flex-col md:flex-row  md:gap-8 font-bold">
           {navItems.map((item, index) => (
             <a
               key={index}
               href="#"
-              className={`text-gray-600 hover:text-gray-900  pt-4  ${
-                activeNavItem === item &&
-                "border-t-[3px] border-blue-700 pt-[14px]"
+              className={` hover:text-gray-900 text-sm lg:text-base pt-4  ${
+                activeNavItem === item
+                  ? "text-blue-700 md:text-gray-600 md:border-t-[3px] border-blue-700 md:pt-[13px]"
+                  : "text-gray-600"
               }`}
               onClick={() => setActiveNavItem(item)}
             >
@@ -87,7 +86,7 @@ const BlockThreeComponent = () => {
             </a>
           ))}
         </div>
-        <div className="flex items-center">
+        <div className="md:absolute right-0 top-2 flex items-center mt-5 md:mt-0">
           <input
             type="text"
             placeholder="Search"
@@ -102,43 +101,43 @@ const BlockThreeComponent = () => {
         </div>
       </nav>
 
-      <div className="flex justify-between mt-5 relative h-[45vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between mt-5 relative md:h-[80vh] lg:h-[60vh]">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative w-full h-full overflow-hidden shadow-lg"
+            className="relative w-full h-[40vh] md:h-full overflow-hidden shadow-lg"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="absolute inset-0 z-0 object-cover h-full"
+              className="absolute inset-0 z-0 object-cover w-full h-full"
             />
             {/* Blue overlay */}
             <div className="absolute inset-0 bg-blue-800 opacity-50 mix-blend-multiply z-10"></div>
-            <div className="relative z-10 px-16  pt-8 to-blue/20 h-full flex flex-col">
-              <h2 className="text-white text-2xl border-b h-[40%]">
+            <div className="relative z-10 px-10 lg:px-10 2xl:px-16 pt-8 h-full flex flex-col">
+              <h2 className="text-white text-xl 2xl:text-2xl border-b h-16 md:h-[40%]">
                 {project.title}
               </h2>
               <p className="font-semibold text-sm mt-2 pt-3 text-gray-300">
                 {project.service}
               </p>
-              <p className="absolute flex items-center gap-1 bottom-4 uppercase text-xs font-bold text-gray-300">
+              <div className="absolute flex items-center justify-center gap-1 bottom-4 uppercase text-[10px] 2xl:text-xs font-bold text-gray-300">
                 <CustomIconComponent
                   svg="locationIcon"
-                  iconSize="w-4 h-4"
+                  iconSize="w-3 h-3"
                   iconColor="text-gray-500"
                 />
-                {project.location}
-              </p>
+                <p className="">{project.location}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <footer className="mt-8 px-16 py-6">
-        <div className=" flex  ">
+      <footer className="mt-4 md:mt-8 px-4 md:px-8 lg:px-12 xl:px-16 py-4 lg:py-6">
+        <div className=" flex flex-col lg:flex-row ">
           <div className="text-lg text-gray-500">
-            <p className="pr-6 w-4/5 mb-8">
+            <p className="2xl:pr-6 w-4/5 mb-6 lg:mb-8">
               © AECOM-URS is a leading provider of engineering, construction,
               and technical services for public agencies and private sector
               companies around the world.
@@ -150,11 +149,11 @@ const BlockThreeComponent = () => {
               Read more
             </a>
           </div>
-          <div className=" h-[150px] w-3 mx-4 bg-gradient-to-t from-transparent via-gray-300 to-transparent"></div>
-          <div className="w-full text-sm text-gray-500 pl-12">
+          <div className=" h-[150px] hidden lg:block w-3 mx-4 bg-gradient-to-t from-transparent via-gray-300 to-transparent"></div>
+          <div className="w-full text-sm text-gray-500 lg:pl-8 2xl:pl-12 mt-10 lg:mt-0">
             <h4 className="text-base text-gray-900 font-bold mb-2">News</h4>
             <ul className="list-disc list-inside">
-              <li className="flex flex-col font-bold mb-5 text-lg text-blue-600">
+              <li className="flex flex-col font-bold mb-5  text-lg text-blue-600">
                 AECOM completes acquisition of URS{" "}
                 <span className="text-xs text-gray-400">October 17, 2014</span>
               </li>

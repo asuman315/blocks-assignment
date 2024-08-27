@@ -1,6 +1,4 @@
 import React from "react";
-import BlockCardComponent from "./ui/BlockCard.uicomponent";
-import { cardsData } from "./components.mocks";
 import Link from "next/link";
 import CustomIconComponent from "./ui/CustomIcon.uicomponent";
 
@@ -8,7 +6,7 @@ const BlockTwoComponent = () => {
   return (
     <div className="relative min-h-screen bg-neutral-100 text-gray-800">
       {/* Top Black Line */}
-      <div className="absolute top-0 right-4 md:left-12 lg:left-16 xl:left-20 2xl:left-28 border-t-4 md:border-t-8 border-black w-fit">
+      <div className="absolute top-0 right-4 md:left-12 @lg:left-16 xl:left-20 2xl:left-28 border-t-4 md:border-t-8 border-black w-fit">
         <h1 className="pt-4 md:pt-8 text-2xl lg:text-4xl font-semibold">
           Gourmet <br /> Factory
         </h1>
@@ -50,7 +48,7 @@ const BlockTwoComponent = () => {
       </header>
 
       {/* Main Section */}
-      <main className="flex flex-col h-[82vh] relative justify-center items-center px-4 sm:px-8 py-20 overflow-hidden">
+      <main className="flex flex-col h-[82vh] relative justify-center items-center px-5 sm:px-8 py-20 overflow-hidden">
         {/* Yellow Line on the Right */}
         <div className="absolute bottom-4 left-0 h-[70%] w-2 sm:w-3 bg-yellow-300"></div>
         <div className="w-full max-w-xl sm:max-w-2xl pt-24 sm:pt-48">
@@ -85,7 +83,7 @@ const BlockTwoComponent = () => {
           </div>
         </div>
         {/* Social media icons */}
-        <div className="absolute bottom-6 flex gap-3 items-center right-8">
+        <div className="absolute bottom-3 md:bottom-6 flex gap-3 items-center right-4 md:right-8">
           <div className=" bottom-5 bg-black p-1.5 lg:p-2 rounded-full">
             <CustomIconComponent
               svg="facebookIcon"

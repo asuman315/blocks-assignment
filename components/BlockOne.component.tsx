@@ -1,10 +1,7 @@
 import React from "react";
-import BlockCardComponent from "./ui/BlockCard.uicomponent";
-import { cardsData } from "./components.mocks";
 import CustomIconComponent from "./ui/CustomIcon.uicomponent";
 
 const BlockOne = () => {
-  const { title, description, imageSrc, link } = cardsData[0];
   return (
     <div className="flex min-h-screen w-screen">
       {/* Left Sidebar */}
