@@ -28,12 +28,13 @@ const MobileHeaderComponent = () => {
         <div className="flex gap-3 md:gap-6">
           <CustomIconComponent svg="humbergerMenuIcon" iconSize="w-4" />
           <div className="flex gap-2">
-            {icons.map((icon) => {
+            {icons.map((icon: string, index: number) => {
               return (
                 <CustomIconComponent
                   svg={icon}
                   iconColor="text-black"
                   iconSize="w-4"
+                  key={index}
                 />
               );
             })}

@@ -10,6 +10,7 @@ const CustomIconComponent: FC<CustomIconComponentProps> = (props) => {
         iconColor ?? "text-gray-900"
       } ${onAction && "cursor-pointer"} ${classes}`}
       onClick={onAction}
+      data-testid="custom-icon"
     >
       {iconSVGs[svg]}
     </div>

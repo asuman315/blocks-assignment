@@ -345,6 +345,7 @@ export const iconSVGs: IconSVGsProps = {
       viewBox="0 0 1024 1024"
       className="icon"
       xmlns="http://www.w3.org/2000/svg"
+      data-testid="icon-basketBallIcon"
     >
       <path
         fill="currentColor"
@@ -401,6 +402,7 @@ export const iconSVGs: IconSVGsProps = {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      data-testid="icon-arrowDropDownIcon"
     >
       <path
         fillRule="evenodd"
